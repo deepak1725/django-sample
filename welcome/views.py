@@ -12,10 +12,8 @@ sentry_sdk.init("http://31f15e37dab5491599fa05bfa996e42f@glitchtip-demo-deepshar
 
 def index(request):
     """Takes an request object as a parameter and creates an pageview object then responds by rendering the index view."""
-    try:
-        division_by_zero = 1 / 0
-    except ZeroDivisionError as e:
-        pass
+    division_by_zero = 1 / 0
+
     # print(division_by_zero)
     hostname = os.getenv('HOSTNAME', 'unknown')
     PageView.objects.create(hostname=hostname)
