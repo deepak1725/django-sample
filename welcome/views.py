@@ -16,7 +16,7 @@ def index(request):
         division_by_zero = 1 / 0
     except ZeroDivisionError as e:
         pass
-    print(division_by_zero)
+    # print(division_by_zero)
     hostname = os.getenv('HOSTNAME', 'unknown')
     PageView.objects.create(hostname=hostname)
 
